@@ -41,3 +41,44 @@ let b : boolean = "x"  // Error 발생
 ->
 let b : boolean = false
 ```
+
+<hr>
+<h2>#2.2 Types of TS part Ⅰ</h2>
+<h3>지금까지 살펴본 기본적인 타입</h3>
+
+```
+let a : number = 1;
+let b : string = "i1";
+let c : boolean = true
+let d : number[] = [1, 2];
+let e : string[] = ["i1", "1"];
+let f : boolean[] = [true];
+```
+
+<b><문법></b>
+- 콜론(:) + 타입
+-> 가능한 한 Typescript가 추론하게 하는 것이 좋다.
+```
+let a = [1, 2];
+```
+
+<h3>Optional 타입</h3>
+<p><b>optional 타입</b> : 객체의 속성이 선택적일 때 사용.<br></p>
+<p>→ 즉, 객체의 특정 속성이 있을 수도 있고 없을 수도 있는 경우<br>
+→ TypeScript에서는 속성 이름 뒤에 물음표(?)를 붙여서 선택적으로 만들 수 있다.</p>
+<p>⭐︎optional 속성은 주로 API 요청에서 모든 필드가 항상 포함되지 않는 경우에 유용합니다.</p>
+
+
+
+<h3>Alias 타입 생성</h3>
+<p><b>타입 별칭(Alias Type)</b>: 복잡한 타입을 쉽게 재사용하거나, 여러 곳에서 반복될 수 있는 타입을 한 번에 정의하는 방식<br>type 키워드를 사용하여 타입에 이름을 붙일 수 있다.</p>
+
+<hr>
+<h2>#2.3 Types of TS part Ⅱ</h2>
+<h3>readonly 속성</h3>
+<p><b>readonly</b>: 객체의 속성 앞에 사용하여 그 속성이 초기화 이후에 수정되지 않도록 만든다.</p>
+<p>- readonly 속성: 객체나 배열의 특정 속성을 수정할 수 없게 만듭니다.<br>
+- 배열에서도 사용 가능: readonly 배열로 만들면 배열의 요소를 추가하거나 변경할 수 없습니다.<br>
+- const와 차이점: const는 변수 자체의 재할당을 막고, readonly는 객체 속성의 수정을 막습니다.</p>
+<p>⭐️ readonly는 불변성을 유지하고 코드의 안정성을 높이는 데 유용한 도구</p>
+
