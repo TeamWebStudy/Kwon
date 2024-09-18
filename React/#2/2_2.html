@@ -1,0 +1,29 @@
+<!-- First React Element  -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <!-- React JS : 애플리케이션이 interactive하도록 만들어주는 library -->
+    <script src="https://www.unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+    <!-- react-dom(library or package) : 모든 React element들을 HTML body에 둘 수 있도록 해준다.-->
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+    <script>
+        const root = document.getElementById("root");
+        // createElement function을 가진 React object 사용
+        // -> React JS로 element 생성
+        const span = React.createElement(
+            "span", 
+            // property 부여 가능(id, style 등등)
+            {id: "good-span", style : {color:'red'}}, 
+            "Hello I'm a span"
+        );
+
+        // body 안에 React element 가져다 두기
+        // render : React element를 가지고 HTML로 만들어 배치
+        // -> 사용자에게 보여주는 역할
+        ReactDOM.render(span, root);
+
+    </script>
+</html>
