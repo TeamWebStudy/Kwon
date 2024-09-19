@@ -37,7 +37,7 @@ a : string
 
 ```
 let b : boolean = "x"  // Error 발생
-											 // b가 boolean이어야 한다.
+                       // b가 boolean이어야 한다.
 ->
 let b : boolean = false
 ```
